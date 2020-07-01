@@ -29,7 +29,9 @@ class TransactionsRepository extends Repository<Transaction> {
     }
 
     public async all(): Promise<Transaction[]> {
-        this.transactions = await this.find();
+        this.transactions = await this.find({
+            relations: ["category_id"],
+        });
 
         return this.transactions;
     }

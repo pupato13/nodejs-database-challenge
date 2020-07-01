@@ -11,6 +11,12 @@ class CategoriesRepository extends Repository<Category> {
 
         return category || null;
     }
+
+    public async getAll(): Promise<Category[] | null> {
+        const categories = await this.find();
+
+        return categories || null;
+    }
 }
 
 export default CategoriesRepository;

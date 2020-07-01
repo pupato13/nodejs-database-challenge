@@ -18,12 +18,17 @@ class CalculateBalanceService {
             transaction => transaction.type === "outcome",
         );
 
-        incomeTransactions.map(transaction =>
-            balance.setIncome(transaction.value),
-        );
-        outcomeTransactions.map(transaction =>
-            balance.setOutcome(transaction.value),
-        );
+        if (incomeTransactions) {
+            incomeTransactions.map(transaction =>
+                balance.setIncome(transaction.value),
+            );
+        }
+
+        if (outcomeTransactions) {
+            outcomeTransactions.map(transaction =>
+                balance.setOutcome(transaction.value),
+            );
+        }
 
         balance.calculateBalance();
 

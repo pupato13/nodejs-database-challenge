@@ -28,14 +28,13 @@ class Transaction {
     @JoinColumn({ name: "category_id" })
     category_id: string;
 
-    // @ManyToOne(type => Category, category => category)
-    // category: Category;
-
     @CreateDateColumn()
     created_at: Date;
 
     @UpdateDateColumn()
     updated_at: Date;
+
+    category: Category;
 }
 
 export default Transaction;
