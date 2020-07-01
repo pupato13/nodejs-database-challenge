@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router } from "express";
 
 // import TransactionsRepository from '../repositories/TransactionsRepository';
 // import CreateTransactionService from '../services/CreateTransactionService';
@@ -7,20 +7,24 @@ import { Router } from 'express';
 
 const transactionsRouter = Router();
 
-transactionsRouter.get('/', async (request, response) => {
-  // TODO
+transactionsRouter.get("/", async (request, response) => {
+    // TODO
+    return response.json({ message: "it's working!" });
 });
 
-transactionsRouter.post('/', async (request, response) => {
-  // TODO
+transactionsRouter.post("/", async (request, response) => {
+    // TODO
+    return response.json({ message: "it's working!" });
 });
 
-transactionsRouter.delete('/:id', async (request, response) => {
-  // TODO
+transactionsRouter.delete("/:id", async (request, response) => {
+    // TODO
+    return response.json({ message: "it's working!" });
 });
 
-transactionsRouter.post('/import', async (request, response) => {
-  // TODO
+transactionsRouter.post("/import", async (request, response) => {
+    // TODO
+    return response.json({ message: "it's working!" });
 });
 
 export default transactionsRouter;
