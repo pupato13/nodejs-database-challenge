@@ -176,7 +176,7 @@ After installing node, this project will need yarn too, so just run the followin
 
 ## :checkered_flag: Running the project
 
-    $ yarn dev
+    $ yarn dev:server
 
 Access: [localhost:3333](http://localhost:3333/transactions)
 
